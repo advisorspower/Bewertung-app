@@ -1,0 +1,50 @@
+@use 'global' as g;
+
+header {
+    transition: all .6s ease;
+    nav {
+        .navbar-nav {
+            a {
+                margin: 0px 5px;
+                font-weight: 600;
+
+
+            }
+        }
+        .nav-link {
+            color: g.$black;
+            transition: all .5s;
+            position: relative;
+            height: 100%;
+            font-size: 13px;
+            text-transform: uppercase;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                z-index: 5;
+                width: 0%;
+                height: 3px;
+                background: g.$orange;
+                transition: all .4s;
+            }
+            &:hover, &:focus, &:active {
+                color: g.$orange;
+                &::before {
+                    width: 80%;
+                }
+            }
+        }
+    }
+    .btn-header {
+        color: white!important;
+        border: 1px solid g.$orange;
+        background-color: g.$orange;
+        font-size: 13px;
+        &:hover {
+            background-color: g.$black;
+            color: white!important;
+            border: 1px solid g.$black;
+        }
+    }
+}

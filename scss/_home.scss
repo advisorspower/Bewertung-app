@@ -1,0 +1,283 @@
+@use 'global' as g;
+
+
+
+section.home {
+    background-color: g.$homeBackground;
+    padding: 150px 50px;
+    @include g.responsive(1200) {
+        height: 100vh;
+    }
+   
+    h1 {
+    line-height: 1;
+    font-weight: 600;
+    }
+}
+
+
+
+section.services {
+    .icon-item {
+        height: 540px;
+        width: 375px;
+        padding: 40px 20px 30px 20px;
+        max-width: 100%;
+        margin: 20px 0;
+        img {
+            width: 250px;
+            height: auto;
+        }
+
+        p {
+            padding: 10px 20px;
+        }
+
+        h3.inner1 {
+            text-transform: uppercase;
+            font-weight: bold;
+            span {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(-100%, -50%);
+                    width: 100%;
+                    height: 30%;
+                    content: "";
+                    z-index: -1;
+                    background-color: g.$softBlue;
+                }
+            }
+        }
+        h3.inner2 {
+            text-transform: uppercase;
+            font-weight: bold;
+            span {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(-100%, -50%);
+                    width: 100%;
+                    height: 30%;
+                    content: "";
+                    z-index: -1;
+                    background-color: g.$yellow;
+                }
+            }
+        }
+        h3.inner3 {
+            text-transform: uppercase;
+            font-weight: bold;
+            span {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(-100%, -50%);
+                    width: 100%;
+                    height: 30%;
+                    content: "";
+                    z-index: -1;
+                    background-color: g.$softRed;
+                }
+            }
+        }
+        h3.inner4 {
+            text-transform: uppercase;
+            font-weight: bold;
+            span {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(-100%, -50%);
+                    width: 100%;
+                    height: 30%;
+                    content: "";
+                    z-index: -1;
+                    background-color: g.$green;
+                }
+            }
+        }
+
+    }
+}
+
+section.numbers {
+    background-color: g.$numberBackground;
+
+    
+
+    h3.n-item1 {
+        text-transform: uppercase;
+        font-weight: bold;
+        span {
+            position: relative;
+            z-index: 2;
+            &::after {
+                position: absolute;
+                top: 50%;
+                transform: translate(-100%, -50%);
+                width: 100%;
+                height: 30%;
+                content: "";
+                z-index: -1;
+                background-color: g.$yellow;
+            }
+        }
+    }
+    h3.n-item2 {
+        text-transform: uppercase;
+        font-weight: bold;
+        span {
+            z-index: 2;
+            position: relative;
+            &::after {
+                position: absolute;
+                top: 50%;
+                transform: translate(-100%, -50%);
+                width: 100%;
+                height: 30%;
+                content: "";
+                z-index: -1;
+                background-color: g.$darkBlue;
+            }
+        }
+    }
+    h3.n-item3 {
+        text-transform: uppercase;
+        font-weight: bold;
+        span {
+            z-index: 2;
+            position: relative;
+            &::after {
+                position: absolute;
+                top: 50%;
+                transform: translate(-100%, -50%);
+                width: 100%;
+                height: 30%;
+                content: "";
+                z-index: -1;
+                background-color: g.$green;
+            }
+        }
+    }
+}
+
+section.price-table {
+    .price-table-item {
+        width: 350px;
+        max-width: 100%;
+        height: 600px;
+        padding: 30px;
+        cursor: pointer;
+        .price-table-item-top {
+            span {
+                font-weight: bold;
+                font-size: 5rem;
+                display: block;
+                margin: 0;
+                sub {
+                    font-size: 2rem;
+                    bottom: 0;
+                }
+            }
+        }
+        ul li {
+            padding: 10px 0;
+            font-size: .9rem;
+            text-align: start!important;
+            i {
+                padding-right: 5px;
+            }
+        }
+    }
+    .bronze {
+        background-color: g.$softBlue;
+    }
+    .silber {
+        background-color: g.$softRed2;
+    }
+    .gold {
+        background-color: g.$softYellow;
+    }
+    .manuel {
+        background-color: g.$green;
+    }
+
+
+}
+
+section.our-team {
+    padding: 150px 0;
+    @include g.responsive(768) {
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+    }
+
+    .our-team-background {
+        height: 100vh;
+
+    }
+
+    .our-team-item {
+        background-color: rgba(#fff, 1);
+        padding: 20px;
+        @include g.responsive(768) {
+            padding: 50px;
+            width: 480px;
+            height: 600px;
+        }
+        
+    }
+}
+
+.news-slide-btn {
+    width: 120px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-radius: 40px;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin: auto;
+    @include g.responsive(768) {
+        position: absolute;
+        bottom:15%;
+        left: 50%;
+    }
+}
+
+
+section.contact-form {
+    input {
+        border: 0;
+        border-bottom: 2px solid g.$black;
+        border-radius: 0;
+        padding: 20px 0;
+        outline: none;
+        &:focus {
+            box-shadow: none!important;
+        }
+
+    }
+    .btnContacts {
+        margin: 20px 0;
+    }
+}
+
+
+@media (max-width:991px) {
+    section {
+        padding: 0 30px;
+    }
+}
+
